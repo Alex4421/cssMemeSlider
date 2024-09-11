@@ -7,51 +7,97 @@ body {
     background-color: darkgrey;
 }
 .slider{
-    width: 1100px;
-    height: 600px;
-    /* overflow: hidden; */
+    width: 80vw;
+    height: 40vw;
+    margin: 2vw auto 0;
 } 
-.middle{
-    position: absolute;
-    top: 50%;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-}
-.navigation{
-    display: flex;
-}
-.bar{
-    height: 10px;
-    width: 10px;
-    margin: 6px;
-    cursor: pointer;
-    background-color:deepskyblue;
-    opacity: .7;
-    border-radius: 4px;
-    transition: all .4s ease;
-}
-.bar:hover{
-    opacity: 1;
-    transform:scale(1.1);
-    background-color: white;
-}
 
 input[name="r"] {
-    position: static;
-    visibility: hidden;
+    display: none;
 }
-.slides {
-    width: 400%;
-    height: 100%;
-    display: flex;
-}
-.slide {
-    width: 25%;
-    transition: all .6s ease;
-}
-.slide img{
+.slides__wrapper{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slides,
+.slider__description{
+    width: 25%;
+    transition: all 1s ease;
+    color: #fff;
+    font-size: 1.8vw;
+}
+.slide img {
+    width: 100%;
+}
+.slider__panel{
+    height: 5vw;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vw;
+}
+.slider__description-wrapper {
+    width: 30%;
+    overflow: hidden;
+}
+.slider__control{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+.control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.point{
+    height: 1.3vw;
+    width: 1.3vw;
+    cursor: pointer;
+    background-color: #71abff;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+.control:hover .point {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #fff;
+}
+#r1:checked~.slides__wrapper .slides .slide1,
+#r1:checked~.slider__panel .slider__description-wrapper .slider__container .description1 {
+    margin-left: 0;
+}
+#r2:checked~.slides__wrapper .slides .slide1,
+#r2:checked~.slider__panel .slider__description-wrapper .slider__container .description1 {
+    margin-left: -25%;
+}
+#r3:checked~.slides__wrapper .slides .slide1,
+#r3:checked~.slider__panel .slider__description-wrapper .slider__container .description1 {
+    margin-left: -50%;
+}
+
+#r4:checked~.slides__wrapper .slides .slide1,
+#r4:checked~.slider__panel .slider__description-wrapper .slider__container .description1 {
+    margin-left: -75%;
+}
+#r1:checked~.slider__panel .slider__control label[for='r1'] .point,
+#r2:checked~.slider__panel .slider__control label[for='r2'] .point,
+#r3:checked~.slider__panel .slider__control label[for='r3'] .point,
+#r4:checked~.slider__panel .slider__control label[for='r4'] .point {
+    background-color: #000;
+    border: 0.2vw solid #71abff;
+}
+
+#r1:checked~.slider__panel .slider__control label[for='r1']:hover .point,
+#r2:checked~.slider__panel .slider__control label[for='r2']:hover .point,
+#r3:checked~.slider__panel .slider__control label[for='r3']:hover .point,
+#r4:checked~.slider__panel .slider__control label[for='r4']:hover .point {
+    border-color: #fff;
 }
