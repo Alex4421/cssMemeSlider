@@ -7,28 +7,62 @@
     <title>Slider</title>
 </head>
 <body>
-    <div class="slider middle">
-        <div class="slides">
-            
+    <div class="slider">            
                 <input type="radio" class="change-cursor" name="r" id="r1" checked>
                 <input type="radio" class="change-cursor" name="r" id="r2">
                 <input type="radio" class="change-cursor" name="r" id="r3">
                 <input type="radio" class="change-cursor" name="r" id="r4">
-            
-                <div class="slide"><img src="/img/1415.jpg" alt="image"></div>
-                <div class="slide"><img src="/img/1725848160.jpg" alt="image"></div>
-                <div class="slide"><img src="/img/1725889380.jpg" alt="image"></div>
-                <div class="slide"><img src="/img/image-1.gif" alt="animation"></div>
-        </div>   
+        <div class="slides_wrapper">
+            <div class="slides">
+                <div class="slide slide1">
+                    <img src="/img/1.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="/img/2.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="/img/3.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="/img/4.jpg" alt="animation">
+                </div>
+            </div>
+        </div> 
+    
+            <div class="slider__panel">
+                <div class="slider__description-wrapper">
+                    <div class="slider__container">
+                        <div class="slider__description description1">
+                            <span>
+                                Example slide 1
+                            </span>
+                        </div>
+                        <div class="slider__description">
+                            <span>
+                                Example slide 2
+                            </span>
+                        </div>
+                        <div class="slider__description">
+                            <span>
+                                Example slide 3
+                            </span>
+                        </div>
+        
+                        <div class="slider__description">
+                            <span>
+                                Example slide 4
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
-
-
-        <div class="navigation">
-            <label for="r1" class="bar"></label checked>
-            <label for="r2" class="bar"></label>
-            <label for="r3" class="bar"></label>
-            <label for="r4" class="bar"></label>
-        </div>
+                <div class="navigation">
+                    <label for="r1" class="bar"></label checked>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                </div>
+            </div>
     </div>
 </body>
 </html>
