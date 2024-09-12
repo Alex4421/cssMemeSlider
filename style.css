@@ -15,13 +15,19 @@ body {
 input[name="r"] {
     display: none;
 }
+.slides,
+.slider__container{
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
 .slides__wrapper{
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 5px;
 }
-.slides,
+.slide,
 .slider__description{
     width: 25%;
     transition: all 1s ease;
@@ -47,6 +53,9 @@ input[name="r"] {
     display: flex;
     justify-content: flex-end;
     width: 20%;
+}
+.slider__container{
+    display: flex;
 }
 .control{
     display: flex;
@@ -101,3 +110,22 @@ input[name="r"] {
 #r4:checked~.slider__panel .slider__control label[for='r4']:hover .point {
     border-color: #fff;
 }
+@media screen and (max-width: 600px) {
+    .slider__panel{
+        flex-direction: column;
+        height: 10vw;
+    }
+    .slider__description-wrapper{
+        order:2;
+        width: 100%;
+    }
+    .slider__control{
+        order:1;
+        width: 100%;
+        justify-content: center;
+    }
+    body {
+        height: 500px;
+    }
+  }
+  
