@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Slider</title>
 </head>
 <body>
+    <div class="slider">            
+                <input type="radio" class="change-cursor" name="r" id="r1" checked>
+                <input type="radio" class="change-cursor" name="r" id="r2">
+                <input type="radio" class="change-cursor" name="r" id="r3">
+                <input type="radio" class="change-cursor" name="r" id="r4">
+        <div class="slides__wrapper">
+            <div class="slides">
+                <div class="slide slide1">
+                    <img src="img/18.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="img/15.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="img/3.jpg" alt="image">
+                </div>
+                <div class="slide">
+                    <img src="img/17.jpg" alt="image">
+                </div>
+            </div>
+        </div> 
     
+            <div class="slider__panel">
+                <div class="slider__description-wrapper">
+                    <div class="slider__container">
+                        <div class="slider__description description1">
+                            <span>
+                                 slide 1
+                            </span>
+                        </div>
+                        <div class="slider__description">
+                            <span>
+                                slide 2
+                            </span>
+                        </div>
+                        <div class="slider__description">
+                            <span>
+                                 slide 3
+                            </span>
+                        </div>
+        
+                        <div class="slider__description">
+                            <span>
+                                 slide 4
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__control">
+                    <label for="r1" class="control">
+                        <div class="point"></div>
+                    </label>
+                    <label for="r2" class="control">
+                        <div class="point"></div>
+                    </label>
+                    <label for="r3" class="control">
+                        <div class="point"></div>
+                    </label>
+                    <label for="r4" class="control">
+                        <div class="point"></div>
+                    </label>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
