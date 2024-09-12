@@ -123,6 +123,22 @@ input[name="r"] {
         order:1;
         width: 100%;
         justify-content: center;
+        gap: 12px;
     }
-  }
-  
+    span{
+        font-size: 4.8vw;
+    }
+    .slider{
+    width: 80vw;
+    height: 40vw;
+    margin: 30vw auto 0;
+    }
+    .point {
+        height: 3.3vw;
+        width: 5.3vw;
+        cursor: pointer;
+        background-color: #71abff;
+        border-radius: 50%;
+        transition: all .5s ease;
+    }
+}
